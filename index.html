@@ -12,109 +12,178 @@
     .main-wrapper { background-color: #f9f2e2; background: linear-gradient(135deg, #f9f2e2 0%, #f0e6d2 100%); min-height: 100%; width: 100%; position: relative; }
     .main-wrapper::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' xmlns='http://www.w3.org/2000/svg'%3E%3G fill='%23C4B5A3' opacity='0.08'%3E%3Cellipse cx='30' cy='38' rx='6' ry='8' transform='rotate(-15 30 38)'/%3E%3Ccircle cx='20' cy='22' r='3'/%3E%3Ccircle cx='40' cy='22' r='3'/%3E%3Ccircle cx='16' cy='30' r='2.5'/%3E%3Ccircle cx='44' cy='30' r='2.5'/%3E%3C/g%3E%3C/svg%3E"); background-repeat: repeat; pointer-events: none; z-index: 0; }
     .main-wrapper > * { position: relative; z-index: 1; }
-    .nav-link { transition: all 0.3s ease; border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom: 3px solid transparent; background-color: rgba(255, 255, 255, 0.6); color: #B8A394; }
+    .nav-link { transition: all 0.3s ease; position: relative; border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom: 3px solid transparent; background-color: rgba(255, 255, 255, 0.6); box-shadow: 0 2px 4px rgba(139, 119, 101, 0.1); color: #B8A394; }
     .nav-link.active { transform: translateY(-6px); background-color: white; border-bottom: 3px solid #B8A394; font-weight: 600; color: #8B7765; }
     .price-tab-btn { background-color: rgba(255, 255, 255, 0.7); color: #B8A394; border: 2px solid #E8DCC8; }
     .price-tab-btn.active { background-color: #B8A394; color: white; border-color: #B8A394; }
     .full-width-image { width: 100%; display: block; border-radius: 1.5rem; }
   </style>
  </head>
- <body class="h-full text-stone-700">
+ <body class="h-full">
   <div class="main-wrapper">
    <nav id="navigation" class="sticky top-0 z-50 bg-white/40 backdrop-blur-md">
-    <div class="max-w-md mx-auto px-4 py-4 flex justify-around gap-1 overflow-x-auto no-scrollbar">
-      <a href="#booking" class="nav-link text-xs px-2 py-2 rounded-lg whitespace-nowrap active">📋 預約須知</a>
-      <a href="#price" class="nav-link text-xs px-2 py-2 rounded-lg whitespace-nowrap">💲 價目表</a>
-      <a href="#membership" class="nav-link text-xs px-2 py-2 rounded-lg whitespace-nowrap">💎 儲值方案</a>
-      <a href="#contact" class="nav-link text-xs px-2 py-2 rounded-lg whitespace-nowrap">💈 聯絡我們</a>
+    <div class="max-w-md mx-auto px-4 py-4 flex justify-center items-center gap-2">
+     <a href="#booking" class="nav-link text-sm px-3 py-2 rounded-lg whitespace-nowrap">📋 預約須知</a> 
+     <a href="#price" class="nav-link text-sm px-3 py-2 rounded-lg whitespace-nowrap">💲 價目表</a> 
+     <a href="#membership" class="nav-link text-sm px-3 py-2 rounded-lg whitespace-nowrap">💎 儲值方案</a> 
+     <a href="#contact" class="nav-link text-sm px-3 py-2 rounded-lg whitespace-nowrap">💈 聯絡我們</a>
     </div>
    </nav>
-
-   <header id="hero" class="py-12 px-6 text-center">
-    <div class="max-w-[180px] mx-auto mb-4">
-     <img src="https://telegra.ph/file/07f3c4c9d96860f4e6e6a.png" alt="Logo" class="w-full h-auto drop-shadow-md">
-    </div>
-    <h1 class="text-4xl font-black text-stone-700">屹仙居 寵物生活館</h1>
-    <p class="mt-4 text-xs px-6 py-2 rounded-full inline-block bg-[#8B9DAF] text-white font-bold">合法特定寵物業者</p>
-   </header>
-
-   <main class="max-w-md mx-auto px-6 pb-12">
-    <section id="booking" class="mb-12 scroll-mt-24 bg-white rounded-3xl shadow-lg p-6 space-y-6">
-      <h2 class="text-2xl font-bold text-center text-stone-600">📃 預約須知</h2>
-      <div>
-       <h3 class="text-xl font-bold mb-2">🕙營業時間</h3>
-       <div class="bg-blue-50 rounded-2xl p-4">
-        <p class="text-xl font-bold">10:00 ~ 19:00</p>
-        <p class="text-xs mt-1">*公休日請參考Google營業時間</p>
-       </div>
-      </div>
-      <div>
-       <h3 class="text-xl font-bold mb-2">💬回覆時間</h3>
-       <div class="bg-green-50 rounded-2xl p-4 text-sm space-y-1">
-        <p>訊息回覆:10:00 ~ 20:00</p>
-        <p>電話接聽:10:00 ~ 19:00</p>
-        <p class="text-xs text-stone-500">店內一人作業時回覆較慢，請見諒。</p>
-       </div>
-      </div>
-      <div class="bg-teal-50 rounded-2xl p-4">
-        <p class="text-sm font-bold mb-1">🕷️ 不收有大量蟲的寶貝</p>
-        <p class="text-xs">為保護店內所有毛孩，如果有發現會立即通知接回。</p>
-        <p class="text-sm text-amber-600 font-bold mt-1 underline">🧹 清潔費 800 元起</p>
-        <div class="mt-2"></div>
-        <p class="text-[10px] text-stone-400">*少量(有用藥但還是發現有蟲)或預防性驅蟲可加價</p>
-      </div>
-    </section>
-
-    <section id="price" class="mb-12 scroll-mt-24">
-     <h2 class="text-2xl font-bold text-center mb-6 text-stone-600">💲 價目表</h2>
-     <div class="flex gap-2 mb-6">
-      <button onclick="showPriceTab('grooming')" id="btn-grooming" class="price-tab-btn active flex-1 py-2 rounded-xl text-sm font-bold">🛁 美容</button>
-      <button onclick="showPriceTab('boarding')" id="btn-boarding" class="price-tab-btn flex-1 py-2 rounded-xl text-sm font-bold">🏡 住宿</button>
-      <button onclick="showPriceTab('home')" id="btn-home" class="price-tab-btn flex-1 py-2 rounded-xl text-sm font-bold">🏘️ 到府保姆</button>
+   <header id="hero" class="py-12 px-6">
+    <div class="max-w-md mx-auto text-center">
+     <div class="mb-0 mx-auto flex justify-center items-center" style="width: 250px; height: 250px;">
+      <img src="https://telegra.ph/file/07f3c4c9d96860f4e6e6a.png" alt="屹仙居 Logo" class="max-w-full max-h-full object-contain">
      </div>
-     <div class="bg-white rounded-3xl shadow-lg p-4">
-      <div id="tab-grooming" class="price-tab-content">
-       <img src="https://telegra.ph/file/0c968f9b9687e87560a8b.png" class="full-width-image" loading="lazy">
+     <h1 class="text-5xl mb-4 tracking-wide text-stone-600" style="margin-top: -20px;">寵物生活館</h1>
+     <p class="text-2xl mb-3 text-stone-500">呵護您的毛孩</p>
+     <p class="text-sm px-6 py-2 rounded-full inline-block bg-[#8B9DAF] text-white">合法特定寵物業者</p>
+    </div>
+   </header>
+   <main class="max-w-md mx-auto px-6 pb-12">
+    <section id="booking" class="mb-12 scroll-mt-20">
+     <h2 class="text-3xl text-center mb-8" style="color: #4C5445;">📃 預約須知</h2>
+     <div class="bg-white rounded-3xl shadow-lg p-6 space-y-6">
+      <div>
+       <h3 class="text-2xl mb-3" style="color: #4C5445;">🕙營業時間</h3>
+       <div class="bg-blue-50 rounded-2xl p-4">
+        <p class="text-xl" style="color: #53565C;">10:00 ~ 19:00</p>
+        <p class="text-sm mt-2" style="color: #4C5445;">*公休日請參考Google營業時間</p>
+       </div>
       </div>
-      <div id="tab-boarding" class="price-tab-content hidden space-y-4">
-       <img src="https://telegra.ph/file/187c7b8c7e87609a8b7c7.png" class="full-width-image" loading="lazy">
+      <div>
+       <h3 class="text-2xl mb-3" style="color: #4C5445;">💬回覆時間</h3>
+       <div class="bg-green-50 rounded-2xl p-4 space-y-2">
+        <p class="text-base" style="color: #53565C;">訊息回覆:10:00 ~ 20:00</p>
+        <p class="text-base" style="color: #53565C;">市內電話接聽:10:00 ~ 19:00</p>
+        <p class="text-sm" style="color: #53565C;">店內會有一人作業的時候</p>
+        <p class="text-sm" style="color: #53565C;">電話跟訊息可能無法即時回覆</p>
+        <p class="text-sm" style="color: #53565C;">若有遺漏再麻煩重新撥打電話或傳訊息</p>
+        <p class="text-sm text-red-600">*公休日市內電話不接聽</p>
+       </div>
+      </div>
+      <div>
+       <h3 class="text-2xl mb-3" style="color: #4C5445;">☝🏻第一次來</h3>
+       <div class="bg-purple-50 rounded-2xl p-4 space-y-2">
+        <p class="text-base text-red-600">▴▴動保規定▴▴</p>
+        <p class="text-sm" style="color: #53565C;">需填寫[基本資料]跟[定型化契約]</p>
+        <p class="text-sm" style="color: #53565C;">預約請加入官方LINE</p>
+        <p class="text-sm" style="color: #53565C;">我們會發送資料可以在家先閱讀跟填寫</p>
+        <p class="text-sm" style="color: #53565C;">所有資料電子紀錄</p>
+        <div class="mt-2"></div>
+        <p class="text-sm" style="color: #53565C;">方便家長們不用每次都重複告知</p>
+        <p class="text-sm" style="color: #53565C;">也讓我們清楚每個孩子的狀況</p>
+       </div>
+      </div>
+      <div>
+       <h3 class="text-2xl mb-3" style="color: #4C5445;">💰付款方式</h3>
+       <div class="bg-amber-50 rounded-2xl p-4">
+        <p class="text-sm" style="color: #53565C;">提供現金付款、匯款、儲值、LINE PAY</p>
+        <p class="text-xs-smaller mt-2" style="color: #53565C;">*儲值都已經有現金回饋,使用LINE PAY儲值會扣除手續費3%</p>
+        <div class="mt-3"></div>
+        <p class="text-sm" style="color: #53565C;">儲值後因個人因素不繼續使用</p>
+        <p class="text-sm" style="color: #53565C;">自儲值日起一年內可申請退費</p>
+        <p class="text-xs-smaller" style="color: #53565C;">退費會扣除當初回饋的金額 + 行政費3% + 匯款手續費15元</p>
+        <p class="text-xs mt-2" style="color: #53565C;">*7-15個工作天內完成退費</p>
+        <div class="mt-2"></div>
+        <p class="text-xs" style="color: #4C5445;">需出示最新電子明細與本人及身份證核對無誤即可申請</p>
+       </div>
+      </div>
+      <div>
+       <h3 class="text-2xl mb-3" style="color: #4C5445;">🚙接送時間</h3>
+       <div class="bg-teal-50 rounded-2xl p-4 space-y-2">
+        <p class="text-xl" style="color: #53565C;">10:00 ~ 19:00</p>
+        <div class="mt-2"></div>
+        <p class="text-base" style="color: #53565C;">此時段內都可以進行接送</p>
+        <div class="mt-2"></div>
+        <p class="text-sm" style="color: #53565C;">若此時間內真的都無法接送</p>
+        <div class="mt-1"></div>
+        <p class="text-sm" style="color: #53565C;">那就要麻煩前一天晚上或是隔天早上囉</p>
+        <div class="mt-2"></div>
+        <p class="text-base text-red-600">10:00前跟20:00後及公休日店面不營業</p>
+        <div class="mt-2 p-3 bg-blue-100 rounded-xl">
+         <p class="text-sm" style="color: #1E40AF;">如果非常需要在19:00後接送</p>
+         <p class="text-sm" style="color: #1E40AF;">務必提前一到兩個小時告知</p>
+         <p class="text-xs" style="color: #1E40AF;">因會影響現場狗狗休息時間安排以及鄰邊住戶</p>
+         <p class="text-sm text-red-600 mt-1">19:00後接送會加收等候延遲費500元</p>
+         <p class="text-sm" style="color: #1E40AF;">超過20:00就只能麻煩隔天再來了🙋🏻‍♀️</p>
+        </div>
+       </div>
+      </div>
+      <div class="border-t-2 border-dashed border-gray-300 my-6"></div>
+      <div>
+       <h3 class="text-2xl mb-3 text-red-600 text-center">⚠️特別提醒⚠️</h3>
+       <div class="bg-red-50 border-2 border-red-200 rounded-2xl p-4 text-center">
+        <p class="text-base text-red-600">美容或住宿接送延遲</p>
+        <p class="text-base text-red-600">▵會有安親費用</p>
+        <div class="mt-4 space-y-1 text-stone-700">
+         <p>第一小時：小型犬 100 / 中型 150 / 大型 200</p>
+         <p>第二小時起：小型犬 50 / 中型 70 / 大型 100</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section id="price" class="mb-12 scroll-mt-20">
+     <h2 class="text-3xl text-center mb-8" style="color: #4C5445;">💲 價目表</h2>
+     <div class="flex gap-2 mb-6">
+       <button onclick="showPriceTab('grooming')" id="btn-grooming" class="price-tab-btn active flex-1 py-2 rounded-xl text-sm font-bold">🛁 美容</button> 
+       <button onclick="showPriceTab('boarding')" id="btn-boarding" class="price-tab-btn flex-1 py-2 rounded-xl text-sm font-bold">🏡 住宿</button> 
+       <button onclick="showPriceTab('home')" id="btn-home" class="price-tab-btn flex-1 py-2 rounded-xl text-sm font-bold">🏘️ 到府保姆</button>
+     </div>
+     <div class="bg-white rounded-3xl shadow-lg p-6">
+      <div id="tab-grooming" class="price-tab-content">
+       <h3 class="text-2xl mb-4" style="color: #4C5445;">🛁 美容</h3>
+       <img src="https://telegra.ph/file/0c968f9b9687e87560a8b.png" alt="美容價目表" class="full-width-image mb-6">
+       <div class="bg-gray-50 rounded-2xl p-5 space-y-4 text-sm text-stone-700">
+         <h4 class="text-xl font-bold" style="color: #4C5445;">📋 美容注意事項</h4>
+         <div class="bg-blue-50 rounded-xl p-4"><p>๑ 第一次來只接受小美容，觀察狀況後再排大修。</p></div>
+         <div class="bg-green-50 rounded-xl p-4"><p>๑ 會怕或有攻擊性請提前告知。</p></div>
+         <div class="bg-teal-50 rounded-xl p-4">
+          <p class="font-bold">🕷️ 不收有大量蟲的寶貝</p>
+          <p class="text-red-600 font-bold underline">🧹 清潔費 800 元起</p>
+          <div class="mt-2"></div>
+          <p class="text-[10px] text-stone-400">*少量(有用藥但還是發現有蟲)或預防性驅蟲可加價</p>
+         </div>
+       </div>
+      </div>
+      <div id="tab-boarding" class="price-tab-content hidden">
+       <h3 class="text-2xl mb-4" style="color: #4C5445;">🏡 住宿費用</h3>
+       <img src="https://telegra.ph/file/187c7b8c7e87609a8b7c7.png" class="full-width-image mb-6">
       </div>
       <div id="tab-home" class="price-tab-content hidden">
-       <img src="https://telegra.ph/file/7c8c7e87609a8b7c7d9e8.png" class="full-width-image" loading="lazy">
+       <h3 class="text-2xl mb-4" style="color: #4C5445;">🏘️ 到府保姆</h3>
+       <img src="https://telegra.ph/file/7c8c7e87609a8b7c7d9e8.png" class="full-width-image">
       </div>
      </div>
     </section>
 
-    <section id="membership" class="mb-12 scroll-mt-24">
-     <h2 class="text-2xl font-bold text-center mb-6 text-stone-600">💎 儲值方案</h2>
-     <div class="bg-white rounded-3xl shadow-lg p-4">
-      <img src="https://telegra.ph/file/9c8c7e87609a8b7c7d9e8.png" class="full-width-image" loading="lazy">
+    <section id="membership" class="mb-12 scroll-mt-20">
+     <h2 class="text-3xl text-center mb-8" style="color: #4C5445;">💎 儲值方案</h2>
+     <div class="bg-white rounded-3xl shadow-lg p-6">
+      <img src="https://telegra.ph/file/9c8c7e87609a8b7c7d9e8.png" class="full-width-image">
      </div>
     </section>
 
-    <section id="contact" class="mb-12 scroll-mt-24 space-y-6">
-     <h2 class="text-2xl font-bold text-center text-stone-600">💈 聯絡我們</h2>
+    <section id="contact" class="mb-12 scroll-mt-20 space-y-6">
+     <h2 class="text-3xl text-center mb-8" style="color: #4C5445;">💈 聯絡我們</h2>
      <div class="bg-white rounded-3xl shadow-lg p-6 border-l-8 border-[#A8B5A0]">
         <h3 class="text-xl font-black">鳳山店</h3>
         <p class="text-sm">📍 高雄市鳳山區青年路二段135號</p>
-        <p class="text-sm">📞 07-7408135</p>
         <a href="https://line.me/R/ti/p/@186avpav" class="block w-full py-4 mt-4 text-center text-white rounded-xl font-bold bg-[#A8B5A0]">LINE 預約</a>
      </div>
      <div class="bg-white rounded-3xl shadow-lg p-6 border-l-8 border-[#8B9DAF]">
         <h3 class="text-xl font-black">岡山店</h3>
         <p class="text-sm">📍 高雄市岡山區柳橋東路18巷5號</p>
-        <p class="text-sm">📞 07-6217716</p>
         <a href="https://line.me/R/ti/p/@695lytby" class="block w-full py-4 mt-4 text-center text-white rounded-xl font-bold bg-[#8B9DAF]">LINE 預約</a>
      </div>
     </section>
    </main>
   </div>
-
   <script>
     function showPriceTab(name) {
-      document.querySelectorAll('.price-tab-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.price-tab-content').forEach(el => el.style.display = 'none');
       document.querySelectorAll('.price-tab-btn').forEach(el => el.classList.remove('active'));
-      document.getElementById('tab-' + name).classList.remove('hidden');
+      document.getElementById('tab-' + name).style.display = 'block';
       document.getElementById('btn-' + name).classList.add('active');
     }
   </script>
