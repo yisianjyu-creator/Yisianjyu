@@ -606,23 +606,22 @@
     </section>
       </section>
 
-      <div style="height: 50vh;"></div>   
+          <div style="height: 50vh;"></div>   
     </main>
   </div>
-  <script>         
-</div>
-   </main>
-  </div>
+
   <script>
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section');
 
+    // 負責導航列變色的功能
     function updateActiveNav() {
       let currentSection = '';
+      const triggerPoint = window.scrollY + 120; // 往下 120px 作為判定線
+
       sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (scrollY >= sectionTop - 150) {
+        if (triggerPoint >= sectionTop) {
           currentSection = section.getAttribute('id');
         }
       });
@@ -635,12 +634,11 @@
       });
     }
 
+    // 監聽滑動事件來變色
     window.addEventListener('scroll', updateActiveNav);
-    
-    
+    updateActiveNav(); // 網頁剛載入時先執行一次
 
-    updateActiveNav();
-
+    // 負責價目表按鈕變色與切換的功能
     function showPriceTab(tabName) {
       document.querySelectorAll('.price-tab-content').forEach(tab => {
         tab.style.display = 'none';
@@ -651,9 +649,8 @@
       });
       
       document.getElementById(`tab-${tabName}`).style.display = 'block';
-      
       document.getElementById(`btn-${tabName}`).classList.add('active');
     }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9cafffe8c41ef1bc',t:'MTc3MDYwNDgwMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ </body>
 </html>
