@@ -610,7 +610,7 @@
     </main>
   </div>
 
-  <script>
+   <script>
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section');
 
@@ -620,7 +620,9 @@
       const triggerPoint = window.scrollY + 120; // 往下 120px 作為判定線
 
       sections.forEach(section => {
-        const sectionTop = section.offsetTop;
+        // 🌟 只有這裡換掉了！改用絕對高度，解決亮錯燈的問題
+        const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+        
         if (triggerPoint >= sectionTop) {
           currentSection = section.getAttribute('id');
         }
@@ -638,7 +640,7 @@
     window.addEventListener('scroll', updateActiveNav);
     updateActiveNav(); // 網頁剛載入時先執行一次
 
-    // 負責價目表按鈕變色與切換的功能
+    // 負責價目表按鈕變色與切換的功能 (🌟 這段幫你原封不動保留！)
     function showPriceTab(tabName) {
       document.querySelectorAll('.price-tab-content').forEach(tab => {
         tab.style.display = 'none';
