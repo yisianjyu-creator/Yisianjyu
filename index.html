@@ -8,18 +8,18 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
-    
+
     body {
       box-sizing: border-box;
       font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
       margin: 0;
       padding: 0;
     }
-    
+
     * {
       box-sizing: border-box;
     }
-    
+
     .main-wrapper {
       background-color: #f9f2e2;
       background: linear-gradient(135deg, #f9f2e2 0%, #f0e6d2 100%);
@@ -27,7 +27,7 @@
       width: 100%;
       position: relative;
     }
-    
+
     .main-wrapper::before {
       content: '';
       position: absolute;
@@ -40,12 +40,12 @@
       pointer-events: none;
       z-index: 0;
     }
-    
+
     .main-wrapper > * {
       position: relative;
       z-index: 1;
     }
-    
+
     .nav-link {
       transition: all 0.3s ease;
       position: relative;
@@ -57,14 +57,14 @@
       transform: translateY(0);
       color: #B8A394;
     }
-    
+
     .nav-link:hover {
       transform: translateY(-4px);
       box-shadow: 0 4px 8px rgba(139, 119, 101, 0.15);
       background-color: rgba(255, 255, 255, 0.9);
       color: #8B7765;
     }
-    
+
     .nav-link.active {
       transform: translateY(-6px);
       background-color: white;
@@ -73,51 +73,51 @@
       font-weight: 600;
       color: #8B7765;
     }
-    
+
     .store-card {
       transition: all 0.3s ease;
     }
-    
+
     .store-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 12px 24px rgba(139, 119, 101, 0.15);
     }
-    
+
     .action-button {
       transition: all 0.3s ease;
     }
-    
+
     .action-button:hover {
       transform: scale(1.05);
     }
-    
+
     .price-tab-btn {
       background-color: rgba(255, 255, 255, 0.7);
       color: #B8A394;
       border: 2px solid #E8DCC8;
     }
-    
+
     .price-tab-btn:hover {
       background-color: rgba(255, 255, 255, 0.9);
       transform: translateY(-2px);
       box-shadow: 0 4px 8px rgba(139, 119, 101, 0.15);
     }
-    
+
     .price-tab-btn.active {
       background-color: #B8A394;
       color: white;
       border-color: #B8A394;
       box-shadow: 0 4px 12px rgba(184, 163, 148, 0.3);
     }
-    
+
     .text-xs-tiny {
       font-size: 10px;
     }
-    
+
     .text-xs-smaller {
       font-size: 9px;
     }
-    
+
     .full-width-image {
       width: 100%;
       display: block;
@@ -343,26 +343,34 @@
          <p class="text-xs mb-1" style="color: #53565C;">動保對於寶貝居住的空間是有規定的</p>
          <p class="text-xs mb-1" style="color: #53565C;">必須依照體型跟活動狀況確認有足夠空間</p>
          <p class="text-xs mb-1" style="color: #53565C;">還是要以現場人員判斷去安排入住房型</p>
-         <p style="font-size: 10px; color: #53565C;">(有些家長因金額考量想把大寶貝塞在小空間是不行的❌)</p>
+         <p style="font-size: 10px; color: #53565C;">(有些家長因金額考量想把大寶貝塞在小空間是不行的喔❌)</p>
         </div>
-        <!-- 5. 基本照顧 -->       
+
+        <!-- 5. 基本照顧 (包含上方文字與綠色色塊) -->
+        <!-- 5. 基本照顧 -->
+        <div class="border-t-2 border-dashed border-gray-300 my-5"></div>
+        
         <!-- 第一個綠色色塊：基本照顧與散步說明 -->
         <div class="bg-green-50 rounded-xl p-4 mb-5">
-         <p class="text-s mb-2" style="color: #53565C;">住宿金額皆包含🚪基本照顧及🍽️用餐</p>    
-         <p class="text-xs mb-1" style="color: #53565C;">因近年動物保護安全意識越來越嚴謹</p>
-         <p class="text-xs mb-1" style="color: #53565C;">
-         <span style="border-b: 1px solid #d1d5db; padding-bottom: 1px;">住宿內容已不包含外出散步</span></p>
-         <p class="text-xs mb-1" style="color: #53565C;">若家中寶貝非常需要且有"外出"散步需求</p>
+         <p class="text-xs mb-1" style="color: #53565C;">住宿金額皆包含基本照顧及用餐</p>    
+         <p class="text-xs mb-1" style="color: #53565C;">因近年動物保護意識更嚴謹,住宿已不包含外出散步</p>
          <p class="text-xs mb-1" style="color: #53565C;">須經家長同意加價安排且同意本店使用保護措施</p>
-         <p class="text-[11px]" style="color: 	#B87070;">*這邊也誠實告知各位家長：</p>
-         <p class="text-[11px]" style="color: 	#B87070;">上保護繩的散步對狗狗來說相對的不自由不舒適</p>
+         <p class="text-[10px] mb-3" style="color: #53565C;">*這邊也誠實告知上保護繩的散步對狗狗來說可能相對不自由不舒適</p>
+         
+         <div class="border-t border-green-200 pt-3 mt-3">
+          <p class="text-xs mb-1" style="color: #53565C;">我們希望寶貝能維持原本的飲食</p>
+          <p class="text-xs mb-1" style="color: #53565C;">以防臨時更換造成腸胃不適、挑食</p>
+          <p class="text-xs mb-1" style="color: #53565C;">更傾向家長們都能自備平常吃的糧食來</p>
+          <p class="text-xs" style="color: #53565C;">所以自備餐都會有總金額95折優惠</p>        
+         <p class="text-[10px]" style="color: #53565C;">*這邊也誠實告知上保護繩的散步對狗狗來說可能相對不自由不舒適</p>
         </div>
+
         <!-- 第二個綠色色塊：自備餐優惠 -->
-        <div class="bg-[#F3F3FA] rounded-xl p-4 mb-5">
+        <div class="bg-green-50 rounded-xl p-4 mb-5">
          <p class="text-xs mb-1" style="color: #53565C;">我們希望寶貝能維持原本的飲食</p>
          <p class="text-xs mb-1" style="color: #53565C;">以防臨時更換造成腸胃不適、挑食</p>
          <p class="text-xs mb-1" style="color: #53565C;">更傾向家長們都能自備平常吃的糧食來</p>
-         <p class="text-xs border-b border-dashed border-gray-300 pb-1 inline-block" style="color: #53565C;">🛍️自備餐都會有總金額95折優惠</p>
+         <p class="text-xs" style="color: #53565C;">所以自備餐都會有總金額95折優惠</p>
         </div>
         <div class="border-t-2 border-dashed border-gray-300 my-5"></div><!-- 2. 額外加購項目 -->
         <div class="mb-5">
@@ -446,8 +454,21 @@
 <p class="text-xs" style="color: #C68347; margin-bottom: 2px; line-height: 1.4;">連續假期期間為特殊節日,住宿需求高</p>
 <p class="text-xs" style="color: #C68347; margin-bottom: 2px; line-height: 1.4;">若決定預約不論提前多久都只可保留使用</p>
 <p class="text-xs" style="color: #C68347; margin-bottom: 0px; line-height: 1.4;">請評估後再做預約</p>
+         </div>
         </div>
-        </div>               
+        <div class="border-t-2 border-dashed border-gray-300 my-5"></div><!-- 5. 基本照顧 -->
+        <div class="mb-5">
+         <p class="text-xs mb-1" style="color: #53565C;">住宿金額皆包含基本照顧及用餐</p>    
+         <p class="text-xs mb-1" style="color: #53565C;">因近年動物保護意識更嚴謹,住宿已不包含外出散步</p>
+         <p class="text-xs mb-1" style="color: #53565C;">須經家長同意加價安排且同意本店使用保護措施</p>
+         <p class="text-[10px] mb-1" style="color: #53565C;">*這邊也誠實告知上保護繩的散步對狗狗來說可能相對不自由不舒適</p>
+         <div class="bg-green-50 rounded-xl p-4 mb-4">
+          <p class="text-xs mb-1" style="color: #53565C;">我們希望寶貝能維持原本的飲食</p>
+          <p class="text-xs mb-1" style="color: #53565C;">以防臨時更換造成腸胃不適、挑食</p>
+          <p class="text-xs mb-1" style="color: #53565C;">更傾向家長們都能自備平常吃的糧食來</p>
+          <p class="text-xs" style="color: #53565C;">所以自備餐都會有總金額95折優惠</p>
+         </div>
+        </div>        
          <p class="text-s mb-1" style="color: #53565C;">📹 無提供連線監視器</p>
          <p class="text-xs mb-1" style="color: #53565C;">透過LINE回傳照片、影片</p>
          <p class="text-xs mb-1" style="color: #53565C;">會在晚上下班前整理完所有寶貝的紀錄發送</p>
@@ -567,35 +588,27 @@
          <h4 class="text-base mb-3" style="color: #4C5445;">💡 住宿小Tips</h4>
          <div class="full-width-image mb-5" style="margin-left: -16px; margin-right: -16px;">
 <img src="https://raw.githubusercontent.com/yisianjyu-creator/yisianjyu0/img/img/ROOMTIPS.jpg" alt="ROOMTIPS" style="width: calc(100% + 32px); max-width: none; height: auto; display: block;" loading="lazy" onerror="console.error('住宿小Tips圖片載入失敗'); this.style.display='none'; this.parentElement.innerHTML='<div style=&quot;background-color: #f3f4f6; padding: 60px 20px; text-align: center; color: #999;&quot;><p style=&quot;font-size: 14px;&quot;>🖼️ 住宿小Tips圖片載入失敗</p></div>';">
-        </div>
+ </div>
         </div>
        </div>
-      </div>
-     </div><!-- 到府保姆內容 -->
+      </div><!-- 到府保姆內容 -->
       <div id="tab-home" class="price-tab-content" style="display: none;">
         <h3 class="text-2xl mb-4" style="color: #4C5445;">🏘️ 到府保姆</h3>
-        <!-- ⭕ 在圖片外面加上防護罩，手機版就不會再往右衝出框外了！ -->
-        <div class="w-full overflow-x-auto rounded-xl">
-          <div class="full-width-image" style="min-width: 600px;"> <!-- 給它一個最小寬度確保圖片字體清晰 -->
-            <img src="https://raw.githubusercontent.com/yisianjyu-creator/yisianjyu0/img/img/HOMEPET.jpg" alt="HOMEPET" style="width: 100%; height: auto; display: block;" loading="lazy" onerror="...">
-          </div>
+        <div class="full-width-image">
+          <img src="https://raw.githubusercontent.com/yisianjyu-creator/yisianjyu0/img/img/HOMEPET.jpg" alt="HOMEPET" style="width: 100%; height: auto; display: block;" loading="lazy" onerror="...">
         </div>
       </div>
-    </div> <!-- 關閉 tab-content 容器 -->
-  </section>
-
-  <!-- 💎 儲值方案 Section -->
+    </div> </section>
   <section id="membership" class="mb-12 scroll-mt-20">
     <h2 class="text-3xl text-center mb-8" style="color: #4C5445;">💎 儲值方案</h2>
     <div class="bg-white rounded-3xl shadow-lg p-6">
       <div class="full-width-image" style="background-color: #f3f4f6; border-radius: 1rem; overflow: hidden;">
         <img src="https://raw.githubusercontent.com/yisianjyu-creator/yisianjyu0/img/img/topup.jpg" alt="topup" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="1600" onerror="...">
       </div>
-    </div> 
-  </section>
-
-  <!-- 💈 聯絡我們 Section (⭕ 刪除重複標籤，結構回復正常) -->
+    </div> </section>
   <section id="contact" class="mb-12 scroll-mt-20">
+    </section><!-- 聯絡我們 Section -->
+    <section id="contact" class="mb-12 scroll-mt-20">
      <h2 class="text-3xl text-center mb-8" style="color: #4C5445;">💈 聯絡我們</h2>
      <div class="space-y-6"><!-- 鳳山店 -->
       <div class="store-card bg-white rounded-3xl shadow-lg p-6">
@@ -621,6 +634,56 @@
        </div>
       </div>
      </div>
-  </section>
+    </section>
+      </section>
 
-  <!-- 註：後面的 </main> </div> 以及 <script> 都維持你原本的完全不用動喔！ -->
+          <div style="height: 50vh;"></div>   
+    </main>
+  </div>
+
+   <script>
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section');
+
+    // 負責導航列變色的功能
+    function updateActiveNav() {
+      let currentSection = '';
+      const triggerPoint = window.scrollY + 120; // 往下 120px 作為判定線
+
+      sections.forEach(section => {
+        // 🌟 只有這裡換掉了！改用絕對高度，解決亮錯燈的問題
+        const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+
+        if (triggerPoint >= sectionTop) {
+          currentSection = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSection}`) {
+          link.classList.add('active');
+        }
+      });
+    }
+
+    // 監聽滑動事件來變色
+    window.addEventListener('scroll', updateActiveNav);
+    updateActiveNav(); // 網頁剛載入時先執行一次
+
+    // 負責價目表按鈕變色與切換的功能 (🌟 這段幫你原封不動保留！)
+    function showPriceTab(tabName) {
+      document.querySelectorAll('.price-tab-content').forEach(tab => {
+        tab.style.display = 'none';
+      });
+
+      document.querySelectorAll('.price-tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      document.getElementById(`tab-${tabName}`).style.display = 'block';
+      document.getElementById(`btn-${tabName}`).classList.add('active');
+    }
+  </script>
+ </body>
+</html>
