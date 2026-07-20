@@ -573,21 +573,28 @@
       </div><!-- 到府保姆內容 -->
       <div id="tab-home" class="price-tab-content" style="display: none;">
         <h3 class="text-2xl mb-4" style="color: #4C5445;">🏘️ 到府保姆</h3>
-        <div class="full-width-image">
-          <img src="https://raw.githubusercontent.com/yisianjyu-creator/yisianjyu0/img/img/HOMEPET.jpg" alt="HOMEPET" style="width: 100%; height: auto; display: block;" loading="lazy" onerror="...">
+        <!-- ⭕ 在圖片外面加上防護罩，手機版就不會再往右衝出框外了！ -->
+        <div class="w-full overflow-x-auto rounded-xl">
+          <div class="full-width-image" style="min-width: 600px;"> <!-- 給它一個最小寬度確保圖片字體清晰 -->
+            <img src="https://raw.githubusercontent.com/yisianjyu-creator/yisianjyu0/img/img/HOMEPET.jpg" alt="HOMEPET" style="width: 100%; height: auto; display: block;" loading="lazy" onerror="...">
+          </div>
         </div>
       </div>
-    </div> </section>
+    </div> <!-- 關閉 tab-content 容器 -->
+  </section>
+
+  <!-- 💎 儲值方案 Section -->
   <section id="membership" class="mb-12 scroll-mt-20">
     <h2 class="text-3xl text-center mb-8" style="color: #4C5445;">💎 儲值方案</h2>
     <div class="bg-white rounded-3xl shadow-lg p-6">
       <div class="full-width-image" style="background-color: #f3f4f6; border-radius: 1rem; overflow: hidden;">
         <img src="https://raw.githubusercontent.com/yisianjyu-creator/yisianjyu0/img/img/topup.jpg" alt="topup" style="width: 100%; height: auto; display: block;" loading="lazy" width="1200" height="1600" onerror="...">
       </div>
-    </div> </section>
+    </div> 
+  </section>
+
+  <!-- 💈 聯絡我們 Section (⭕ 刪除重複標籤，結構回復正常) -->
   <section id="contact" class="mb-12 scroll-mt-20">
-    </section><!-- 聯絡我們 Section -->
-    <section id="contact" class="mb-12 scroll-mt-20">
      <h2 class="text-3xl text-center mb-8" style="color: #4C5445;">💈 聯絡我們</h2>
      <div class="space-y-6"><!-- 鳳山店 -->
       <div class="store-card bg-white rounded-3xl shadow-lg p-6">
@@ -613,56 +620,6 @@
        </div>
       </div>
      </div>
-    </section>
-      </section>
+  </section>
 
-          <div style="height: 50vh;"></div>   
-    </main>
-  </div>
-
-   <script>
-    const navLinks = document.querySelectorAll('.nav-link');
-    const sections = document.querySelectorAll('section');
-
-    // 負責導航列變色的功能
-    function updateActiveNav() {
-      let currentSection = '';
-      const triggerPoint = window.scrollY + 120; // 往下 120px 作為判定線
-
-      sections.forEach(section => {
-        // 🌟 只有這裡換掉了！改用絕對高度，解決亮錯燈的問題
-        const sectionTop = section.getBoundingClientRect().top + window.scrollY;
-        
-        if (triggerPoint >= sectionTop) {
-          currentSection = section.getAttribute('id');
-        }
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${currentSection}`) {
-          link.classList.add('active');
-        }
-      });
-    }
-
-    // 監聽滑動事件來變色
-    window.addEventListener('scroll', updateActiveNav);
-    updateActiveNav(); // 網頁剛載入時先執行一次
-
-    // 負責價目表按鈕變色與切換的功能 (🌟 這段幫你原封不動保留！)
-    function showPriceTab(tabName) {
-      document.querySelectorAll('.price-tab-content').forEach(tab => {
-        tab.style.display = 'none';
-      });
-      
-      document.querySelectorAll('.price-tab-btn').forEach(btn => {
-        btn.classList.remove('active');
-      });
-      
-      document.getElementById(`tab-${tabName}`).style.display = 'block';
-      document.getElementById(`btn-${tabName}`).classList.add('active');
-    }
-  </script>
- </body>
-</html>
+  <!-- 註：後面的 </main> </div> 以及 <script> 都維持你原本的完全不用動喔！ -->
